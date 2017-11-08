@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta property="og:title" content="SoundCloud Playlist | Powered by Soundcloud Visualizer">
+    <meta property="og:description" content="My personal playlist - A collection of my favorite songs on SoundCloud. Listen to music with cool-looking visualizations. Hope you enjoy it!">
+    <meta property="og:url" content="https://soundcloud-trongtinh1212.c9users.io/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://i.imgur.com/DCXNdbP.png">
+    <meta property="og:site_name" content="SoundCloud Playlist">
+    <meta property="og:locale" content="en_US">
+    <title>SoundCloud Playlist | Powered by Soundcloud Visualizer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="visualizer"></div>
+
+<div id="controlPanel" class="hidden">
+    <div id="tab"><a href="#" id="toggleButton"><i class="icon-menu"></i></a></div>
+    <div id="trackInfoPanel" class="hidden">
+        <img id="infoImage" src="">
+        <div id="infoArtist"></div>
+        <div id="infoTrack"></div>
+    </div>
+    <div id="playerControls">
+        <form id="form">
+            <input type="url" id="input" placeholder="Paste Soundcloud URL here (https://soundcloud.com/artist/track)" pattern="^https?://soundcloud\.com/[^/]+/(sets/)?[^/]+$" autofocus required>
+            <button type="submit" id="submit"><i class="icon-play"></i></button><br>
+        </form>
+        <audio id="player" controls autoplay preload autobuffer></audio>
+    </div>
+</div>
+
+<div id="messageBox" class="hidden"></div>
+
+<script src="https://connect.soundcloud.com/sdk.js"></script>
+<script src="js/app.min.js"></script>
+</body>
+</html>
